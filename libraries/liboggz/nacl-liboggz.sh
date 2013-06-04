@@ -11,11 +11,7 @@
 # this script downloads, patches, and builds liboggz for Native Client 
 #
 
-readonly URL=http://downloads.xiph.org/releases/liboggz/liboggz-1.1.1.tar.gz
-
-readonly PATCH_FILE=nacl-liboggz-1.1.1.patch
-readonly PACKAGE_NAME=liboggz-1.1.1
-
+source pkg_info
 source ../../build_tools/common.sh
 
 export LIBS="-lnosys -lm"

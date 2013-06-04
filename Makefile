@@ -93,6 +93,7 @@ LIBRARIES = \
      libraries/tiff \
      libraries/FreeImage \
      libraries/libogg \
+     libraries/liboggz \
      libraries/libvorbis \
      libraries/faad2 \
      libraries/faac \
@@ -223,6 +224,7 @@ $(PACKAGES:%=$(SENT)/%): $(SENT)/%:
 # packages with dependencies
 $(SENT)/libraries/libvorbis: libraries/libogg
 $(SENT)/libraries/libtheora: libraries/libogg
+$(SENT)/libraries/liboggz: libraries/libogg
 $(SENT)/libraries/flac: libraries/libogg
 $(SENT)/libraries/speex: libraries/libogg
 $(SENT)/libraries/fontconfig: libraries/expat \
@@ -306,6 +308,7 @@ modplug: libraries/libmodplug ;
 mpg123: libraries/mpg123 ;
 nacl-mounts: libraries/nacl-mounts ;
 ogg: libraries/libogg ;
+oggz: libraries/liboggz ;
 openal: libraries/openal-soft ;
 freealut: libraries/freealut ;
 openscenegraph: libraries/OpenSceneGraph ;
